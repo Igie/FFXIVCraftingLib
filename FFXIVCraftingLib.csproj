@@ -1,0 +1,2891 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Definitions\Achievement.json" />
+    <None Remove="Definitions\AchievementCategory.json" />
+    <None Remove="Definitions\AchievementHideCondition.json" />
+    <None Remove="Definitions\AchievementKind.json" />
+    <None Remove="Definitions\AchievementTarget.json" />
+    <None Remove="Definitions\Action.json" />
+    <None Remove="Definitions\ActionCastTimeline.json" />
+    <None Remove="Definitions\ActionCastVFX.json" />
+    <None Remove="Definitions\ActionCategory.json" />
+    <None Remove="Definitions\ActionComboRoute.json" />
+    <None Remove="Definitions\ActionIndirection.json" />
+    <None Remove="Definitions\ActionParam.json" />
+    <None Remove="Definitions\ActionProcStatus.json" />
+    <None Remove="Definitions\ActionTimeline.json" />
+    <None Remove="Definitions\ActionTimelineMove.json" />
+    <None Remove="Definitions\ActionTimelineReplace.json" />
+    <None Remove="Definitions\ActionTransient.json" />
+    <None Remove="Definitions\ActivityFeedButtons.json" />
+    <None Remove="Definitions\ActivityFeedCaptions.json" />
+    <None Remove="Definitions\ActivityFeedGroupCaptions.json" />
+    <None Remove="Definitions\ActivityFeedImages.json" />
+    <None Remove="Definitions\Addon.json" />
+    <None Remove="Definitions\Adventure.json" />
+    <None Remove="Definitions\AdventureExPhase.json" />
+    <None Remove="Definitions\AetherCurrent.json" />
+    <None Remove="Definitions\AetherCurrentCompFlgSet.json" />
+    <None Remove="Definitions\AetherialWheel.json" />
+    <None Remove="Definitions\Aetheryte.json" />
+    <None Remove="Definitions\AetheryteSystemDefine.json" />
+    <None Remove="Definitions\AetheryteTransient.json" />
+    <None Remove="Definitions\AirshipExplorationLevel.json" />
+    <None Remove="Definitions\AirshipExplorationLog.json" />
+    <None Remove="Definitions\AirshipExplorationParamType.json" />
+    <None Remove="Definitions\AirshipExplorationPart.json" />
+    <None Remove="Definitions\AirshipExplorationPoint.json" />
+    <None Remove="Definitions\AkatsukiNote.json" />
+    <None Remove="Definitions\AkatsukiNoteString.json" />
+    <None Remove="Definitions\AnimationLOD.json" />
+    <None Remove="Definitions\AnimaWeapon5.json" />
+    <None Remove="Definitions\AnimaWeapon5Param.json" />
+    <None Remove="Definitions\AnimaWeapon5PatternGroup.json" />
+    <None Remove="Definitions\AnimaWeapon5SpiritTalk.json" />
+    <None Remove="Definitions\AnimaWeapon5SpiritTalkParam.json" />
+    <None Remove="Definitions\AnimaWeapon5TradeItem.json" />
+    <None Remove="Definitions\AnimaWeaponFUITalk.json" />
+    <None Remove="Definitions\AnimaWeaponFUITalkParam.json" />
+    <None Remove="Definitions\AnimaWeaponIcon.json" />
+    <None Remove="Definitions\AnimaWeaponItem.json" />
+    <None Remove="Definitions\AozAction.json" />
+    <None Remove="Definitions\AozActionTransient.json" />
+    <None Remove="Definitions\AOZArrangement.json" />
+    <None Remove="Definitions\AOZBoss.json" />
+    <None Remove="Definitions\AOZContent.json" />
+    <None Remove="Definitions\AOZContentBriefingBNpc.json" />
+    <None Remove="Definitions\AOZReport.json" />
+    <None Remove="Definitions\AOZScore.json" />
+    <None Remove="Definitions\AquariumFish.json" />
+    <None Remove="Definitions\AquariumWater.json" />
+    <None Remove="Definitions\ArchiveItem.json" />
+    <None Remove="Definitions\ArrayEventHandler.json" />
+    <None Remove="Definitions\AttackType.json" />
+    <None Remove="Definitions\BacklightColor.json" />
+    <None Remove="Definitions\Ballista.json" />
+    <None Remove="Definitions\Balloon.json" />
+    <None Remove="Definitions\BannerBg.json" />
+    <None Remove="Definitions\BannerCondition.json" />
+    <None Remove="Definitions\BannerDecoration.json" />
+    <None Remove="Definitions\BannerDesignPreset.json" />
+    <None Remove="Definitions\BannerFacial.json" />
+    <None Remove="Definitions\BannerFrame.json" />
+    <None Remove="Definitions\BannerPreset.json" />
+    <None Remove="Definitions\BannerTimeline.json" />
+    <None Remove="Definitions\BannerTimelineFrame.json" />
+    <None Remove="Definitions\BaseParam.json" />
+    <None Remove="Definitions\BattleLeve.json" />
+    <None Remove="Definitions\BattleLeveRule.json" />
+    <None Remove="Definitions\BeastRankBonus.json" />
+    <None Remove="Definitions\BeastReputationRank.json" />
+    <None Remove="Definitions\BeastTribe.json" />
+    <None Remove="Definitions\Behavior.json" />
+    <None Remove="Definitions\BehaviorPath.json" />
+    <None Remove="Definitions\BenchmarkOverrideEquipment.json" />
+    <None Remove="Definitions\BGM.json" />
+    <None Remove="Definitions\BGMFade.json" />
+    <None Remove="Definitions\BGMFadeType.json" />
+    <None Remove="Definitions\BGMScene.json" />
+    <None Remove="Definitions\BGMSituation.json" />
+    <None Remove="Definitions\BGMSwitch.json" />
+    <None Remove="Definitions\BGMSystemDefine.json" />
+    <None Remove="Definitions\BNpcAnnounceIcon.json" />
+    <None Remove="Definitions\BNpcBase.json" />
+    <None Remove="Definitions\BNpcBasePopVfx.json" />
+    <None Remove="Definitions\BNpcCustomize.json" />
+    <None Remove="Definitions\BNpcName.json" />
+    <None Remove="Definitions\BNpcParts.json" />
+    <None Remove="Definitions\BNpcState.json" />
+    <None Remove="Definitions\Booster.json" />
+    <None Remove="Definitions\Buddy.json" />
+    <None Remove="Definitions\BuddyAction.json" />
+    <None Remove="Definitions\BuddyEquip.json" />
+    <None Remove="Definitions\BuddyItem.json" />
+    <None Remove="Definitions\BuddyRank.json" />
+    <None Remove="Definitions\BuddySkill.json" />
+    <None Remove="Definitions\Cabinet.json" />
+    <None Remove="Definitions\CabinetCategory.json" />
+    <None Remove="Definitions\Calendar.json" />
+    <None Remove="Definitions\Carry.json" />
+    <None Remove="Definitions\Channeling.json" />
+    <None Remove="Definitions\CharaCardBase.json" />
+    <None Remove="Definitions\CharaCardDecoration.json" />
+    <None Remove="Definitions\CharaCardDesignPreset.json" />
+    <None Remove="Definitions\CharaCardDesignType.json" />
+    <None Remove="Definitions\CharaCardHeader.json" />
+    <None Remove="Definitions\CharaCardPlayStyle.json" />
+    <None Remove="Definitions\CharaMakeClassEquip.json" />
+    <None Remove="Definitions\CharaMakeCustomize.json" />
+    <None Remove="Definitions\CharaMakeName.json" />
+    <None Remove="Definitions\CharaMakeType.json" />
+    <None Remove="Definitions\ChocoboRace.json" />
+    <None Remove="Definitions\ChocoboRaceAbility.json" />
+    <None Remove="Definitions\ChocoboRaceAbilityType.json" />
+    <None Remove="Definitions\ChocoboRaceItem.json" />
+    <None Remove="Definitions\ChocoboRaceRank.json" />
+    <None Remove="Definitions\ChocoboRaceStatus.json" />
+    <None Remove="Definitions\ChocoboRaceTerritory.json" />
+    <None Remove="Definitions\ChocoboRaceTutorial.json" />
+    <None Remove="Definitions\ChocoboRaceWeather.json" />
+    <None Remove="Definitions\ChocoboTaxi.json" />
+    <None Remove="Definitions\ChocoboTaxiStand.json" />
+    <None Remove="Definitions\CircleActivity.json" />
+    <None Remove="Definitions\ClassJob.json" />
+    <None Remove="Definitions\ClassJobCategory.json" />
+    <None Remove="Definitions\CollectablesShop.json" />
+    <None Remove="Definitions\CollectablesShopItem.json" />
+    <None Remove="Definitions\CollectablesShopItemGroup.json" />
+    <None Remove="Definitions\CollectablesShopRefine.json" />
+    <None Remove="Definitions\CollectablesShopRewardItem.json" />
+    <None Remove="Definitions\CollectablesShopRewardScrip.json" />
+    <None Remove="Definitions\Companion.json" />
+    <None Remove="Definitions\CompanionMove.json" />
+    <None Remove="Definitions\CompanionTransient.json" />
+    <None Remove="Definitions\CompanyAction.json" />
+    <None Remove="Definitions\CompanyCraftDraft.json" />
+    <None Remove="Definitions\CompanyCraftDraftCategory.json" />
+    <None Remove="Definitions\CompanyCraftManufactoryState.json" />
+    <None Remove="Definitions\CompanyCraftPart.json" />
+    <None Remove="Definitions\CompanyCraftProcess.json" />
+    <None Remove="Definitions\CompanyCraftSequence.json" />
+    <None Remove="Definitions\CompanyCraftSupplyItem.json" />
+    <None Remove="Definitions\CompanyCraftType.json" />
+    <None Remove="Definitions\CompanyLeve.json" />
+    <None Remove="Definitions\CompanyLeveRule.json" />
+    <None Remove="Definitions\CompleteJournal.json" />
+    <None Remove="Definitions\CompleteJournalCategory.json" />
+    <None Remove="Definitions\Completion.json" />
+    <None Remove="Definitions\Condition.json" />
+    <None Remove="Definitions\ConfigKey.json" />
+    <None Remove="Definitions\ContentCloseCycle.json" />
+    <None Remove="Definitions\ContentExAction.json" />
+    <None Remove="Definitions\ContentFinderCondition.json" />
+    <None Remove="Definitions\ContentFinderConditionTransient.json" />
+    <None Remove="Definitions\ContentGauge.json" />
+    <None Remove="Definitions\ContentGaugeColor.json" />
+    <None Remove="Definitions\ContentMemberType.json" />
+    <None Remove="Definitions\ContentNpcTalk.json" />
+    <None Remove="Definitions\ContentRandomSelect.json" />
+    <None Remove="Definitions\ContentRoulette.json" />
+    <None Remove="Definitions\ContentRouletteOpenRule.json" />
+    <None Remove="Definitions\ContentRouletteRoleBonus.json" />
+    <None Remove="Definitions\ContentsNote.json" />
+    <None Remove="Definitions\ContentsTutorial.json" />
+    <None Remove="Definitions\ContentsTutorialPage.json" />
+    <None Remove="Definitions\ContentTalk.json" />
+    <None Remove="Definitions\ContentTalkParam.json" />
+    <None Remove="Definitions\ContentType.json" />
+    <None Remove="Definitions\CraftAction.json" />
+    <None Remove="Definitions\CraftLeve.json" />
+    <None Remove="Definitions\CraftLevelDifference.json" />
+    <None Remove="Definitions\CraftLeveTalk.json" />
+    <None Remove="Definitions\CraftType.json" />
+    <None Remove="Definitions\Credit.json" />
+    <None Remove="Definitions\CreditBackImage.json" />
+    <None Remove="Definitions\CreditCast.json" />
+    <None Remove="Definitions\CreditList.json" />
+    <None Remove="Definitions\CreditListText.json" />
+    <None Remove="Definitions\CustomTalk.json" />
+    <None Remove="Definitions\CustomTalkNestHandlers.json" />
+    <None Remove="Definitions\Cutscene.json" />
+    <None Remove="Definitions\CutSceneIncompQuest.json" />
+    <None Remove="Definitions\CutsceneMotion.json" />
+    <None Remove="Definitions\CutsceneWorkIndex.json" />
+    <None Remove="Definitions\CutScreenImage.json" />
+    <None Remove="Definitions\CycleTime.json" />
+    <None Remove="Definitions\DailySupplyItem.json" />
+    <None Remove="Definitions\DawnContent.json" />
+    <None Remove="Definitions\DawnGrowMember.json" />
+    <None Remove="Definitions\DawnMemberUIParam.json" />
+    <None Remove="Definitions\DawnQuestMember.json" />
+    <None Remove="Definitions\DeepDungeon.json" />
+    <None Remove="Definitions\DeepDungeonBan.json" />
+    <None Remove="Definitions\DeepDungeonDanger.json" />
+    <None Remove="Definitions\DeepDungeonEquipment.json" />
+    <None Remove="Definitions\DeepDungeonFloorEffectUI.json" />
+    <None Remove="Definitions\DeepDungeonItem.json" />
+    <None Remove="Definitions\DeepDungeonLayer.json" />
+    <None Remove="Definitions\DeepDungeonMagicStone.json" />
+    <None Remove="Definitions\DeepDungeonMap5X.json" />
+    <None Remove="Definitions\DeepDungeonRoom.json" />
+    <None Remove="Definitions\DeepDungeonStatus.json" />
+    <None Remove="Definitions\DefaultTalk.json" />
+    <None Remove="Definitions\DefaultTalkLipSyncType.json" />
+    <None Remove="Definitions\DeliveryQuest.json" />
+    <None Remove="Definitions\Description.json" />
+    <None Remove="Definitions\DescriptionPage.json" />
+    <None Remove="Definitions\DescriptionSection.json" />
+    <None Remove="Definitions\DescriptionString.json" />
+    <None Remove="Definitions\DisposalShop.json" />
+    <None Remove="Definitions\DisposalShopFilterType.json" />
+    <None Remove="Definitions\DisposalShopItem.json" />
+    <None Remove="Definitions\DpsChallenge.json" />
+    <None Remove="Definitions\DpsChallengeOfficer.json" />
+    <None Remove="Definitions\DpsChallengeTransient.json" />
+    <None Remove="Definitions\DynamicEvent.json" />
+    <None Remove="Definitions\DynamicEventEnemyType.json" />
+    <None Remove="Definitions\DynamicEventSingleBattle.json" />
+    <None Remove="Definitions\DynamicEventType.json" />
+    <None Remove="Definitions\EmjAddon.json" />
+    <None Remove="Definitions\EmjDani.json" />
+    <None Remove="Definitions\Emote.json" />
+    <None Remove="Definitions\EmoteCategory.json" />
+    <None Remove="Definitions\EmoteMode.json" />
+    <None Remove="Definitions\ENpcBase.json" />
+    <None Remove="Definitions\ENpcDressUp.json" />
+    <None Remove="Definitions\ENpcDressUpDress.json" />
+    <None Remove="Definitions\ENpcResident.json" />
+    <None Remove="Definitions\EObj.json" />
+    <None Remove="Definitions\EObjName.json" />
+    <None Remove="Definitions\EquipRaceCategory.json" />
+    <None Remove="Definitions\EquipSlotCategory.json" />
+    <None Remove="Definitions\EurekaAetherItem.json" />
+    <None Remove="Definitions\EurekaAethernet.json" />
+    <None Remove="Definitions\EurekaGrowData.json" />
+    <None Remove="Definitions\EurekaLogosMixerProbability.json" />
+    <None Remove="Definitions\EurekaMagiaAction.json" />
+    <None Remove="Definitions\EurekaMagiciteItem.json" />
+    <None Remove="Definitions\EurekaMagiciteItemType.json" />
+    <None Remove="Definitions\EurekaSphereElementAdjust.json" />
+    <None Remove="Definitions\EventAction.json" />
+    <None Remove="Definitions\EventCustomIconType.json" />
+    <None Remove="Definitions\EventIconPriority.json" />
+    <None Remove="Definitions\EventIconType.json" />
+    <None Remove="Definitions\EventItem.json" />
+    <None Remove="Definitions\EventItemCastTimeline.json" />
+    <None Remove="Definitions\EventItemHelp.json" />
+    <None Remove="Definitions\EventItemTimeline.json" />
+    <None Remove="Definitions\EventPathMove.json" />
+    <None Remove="Definitions\EventSystemDefine.json" />
+    <None Remove="Definitions\ExportedGatheringPoint.json" />
+    <None Remove="Definitions\ExportedSG.json" />
+    <None Remove="Definitions\ExVersion.json" />
+    <None Remove="Definitions\Fate.json" />
+    <None Remove="Definitions\FateEvent.json" />
+    <None Remove="Definitions\FateMode.json" />
+    <None Remove="Definitions\FateProgressUI.json" />
+    <None Remove="Definitions\FateShop.json" />
+    <None Remove="Definitions\FateTokenType.json" />
+    <None Remove="Definitions\FCActivity.json" />
+    <None Remove="Definitions\FCActivityCategory.json" />
+    <None Remove="Definitions\FCAuthority.json" />
+    <None Remove="Definitions\FCAuthorityCategory.json" />
+    <None Remove="Definitions\FCChestName.json" />
+    <None Remove="Definitions\FCCrestSymbol.json" />
+    <None Remove="Definitions\FccShop.json" />
+    <None Remove="Definitions\FCHierarchy.json" />
+    <None Remove="Definitions\FCProfile.json" />
+    <None Remove="Definitions\FCRank.json" />
+    <None Remove="Definitions\FCReputation.json" />
+    <None Remove="Definitions\FCRights.json" />
+    <None Remove="Definitions\Festival.json" />
+    <None Remove="Definitions\FieldMarker.json" />
+    <None Remove="Definitions\FishingRecordType.json" />
+    <None Remove="Definitions\FishingRecordTypeTransient.json" />
+    <None Remove="Definitions\FishingSpot.json" />
+    <None Remove="Definitions\FishParameter.json" />
+    <None Remove="Definitions\FittingShop.json" />
+    <None Remove="Definitions\FittingShopCategory.json" />
+    <None Remove="Definitions\FittingShopCategoryItem.json" />
+    <None Remove="Definitions\FittingShopItemSet.json" />
+    <None Remove="Definitions\Frontline03.json" />
+    <None Remove="Definitions\Frontline04.json" />
+    <None Remove="Definitions\FurnitureCatalogCategory.json" />
+    <None Remove="Definitions\FurnitureCatalogItemList.json" />
+    <None Remove="Definitions\game.ver" />
+    <None Remove="Definitions\GameRewardObtainType.json" />
+    <None Remove="Definitions\GardeningSeed.json" />
+    <None Remove="Definitions\GatheringCondition.json" />
+    <None Remove="Definitions\GatheringExp.json" />
+    <None Remove="Definitions\GatheringItem.json" />
+    <None Remove="Definitions\GatheringItemLevelConvertTable.json" />
+    <None Remove="Definitions\GatheringItemPoint.json" />
+    <None Remove="Definitions\GatheringLeve.json" />
+    <None Remove="Definitions\GatheringLeveRoute.json" />
+    <None Remove="Definitions\GatheringLeveRule.json" />
+    <None Remove="Definitions\GatheringNotebookList.json" />
+    <None Remove="Definitions\GatheringPoint.json" />
+    <None Remove="Definitions\GatheringPointBase.json" />
+    <None Remove="Definitions\GatheringPointBonus.json" />
+    <None Remove="Definitions\GatheringPointBonusType.json" />
+    <None Remove="Definitions\GatheringPointName.json" />
+    <None Remove="Definitions\GatheringPointTransient.json" />
+    <None Remove="Definitions\GatheringRarePopTimeTable.json" />
+    <None Remove="Definitions\GatheringSubCategory.json" />
+    <None Remove="Definitions\GatheringType.json" />
+    <None Remove="Definitions\GcArmyCaptureTactics.json" />
+    <None Remove="Definitions\GcArmyEquipPreset.json" />
+    <None Remove="Definitions\GcArmyExpedition.json" />
+    <None Remove="Definitions\GcArmyExpeditionMemberBonus.json" />
+    <None Remove="Definitions\GcArmyExpeditionType.json" />
+    <None Remove="Definitions\GcArmyMemberGrow.json" />
+    <None Remove="Definitions\GcArmyTraining.json" />
+    <None Remove="Definitions\GCRankGridaniaFemaleText.json" />
+    <None Remove="Definitions\GCRankGridaniaMaleText.json" />
+    <None Remove="Definitions\GCRankLimsaFemaleText.json" />
+    <None Remove="Definitions\GCRankLimsaMaleText.json" />
+    <None Remove="Definitions\GCRankUldahFemaleText.json" />
+    <None Remove="Definitions\GCRankUldahMaleText.json" />
+    <None Remove="Definitions\GCScripShopCategory.json" />
+    <None Remove="Definitions\GCScripShopItem.json" />
+    <None Remove="Definitions\GCShop.json" />
+    <None Remove="Definitions\GCShopItemCategory.json" />
+    <None Remove="Definitions\GCSupplyDuty.json" />
+    <None Remove="Definitions\GCSupplyDutyReward.json" />
+    <None Remove="Definitions\GeneralAction.json" />
+    <None Remove="Definitions\GFATE.json" />
+    <None Remove="Definitions\GFateClimbing2.json" />
+    <None Remove="Definitions\GFateClimbing2Content.json" />
+    <None Remove="Definitions\GFateClimbing2TotemType.json" />
+    <None Remove="Definitions\GFateRideShooting.json" />
+    <None Remove="Definitions\GilShop.json" />
+    <None Remove="Definitions\GilShopItem.json" />
+    <None Remove="Definitions\GimmickAccessor.json" />
+    <None Remove="Definitions\GimmickJump.json" />
+    <None Remove="Definitions\GimmickRect.json" />
+    <None Remove="Definitions\GoldSaucerArcadeMachine.json" />
+    <None Remove="Definitions\GoldSaucerTextData.json" />
+    <None Remove="Definitions\GrandCompany.json" />
+    <None Remove="Definitions\GrandCompanyRank.json" />
+    <None Remove="Definitions\GroupPoseFrame.json" />
+    <None Remove="Definitions\GroupPoseStamp.json" />
+    <None Remove="Definitions\GroupPoseStampCategory.json" />
+    <None Remove="Definitions\GuardianDeity.json" />
+    <None Remove="Definitions\Guide.json" />
+    <None Remove="Definitions\GuidePage.json" />
+    <None Remove="Definitions\GuidePageString.json" />
+    <None Remove="Definitions\GuideTitle.json" />
+    <None Remove="Definitions\GuildleveAssignment.json" />
+    <None Remove="Definitions\GuildleveAssignmentCategory.json" />
+    <None Remove="Definitions\GuildleveAssignmentTalk.json" />
+    <None Remove="Definitions\GuildOrder.json" />
+    <None Remove="Definitions\GuildOrderGuide.json" />
+    <None Remove="Definitions\GuildOrderOfficer.json" />
+    <None Remove="Definitions\HairMakeType.json" />
+    <None Remove="Definitions\HouseRetainerPose.json" />
+    <None Remove="Definitions\HousingAethernet.json" />
+    <None Remove="Definitions\HousingAppeal.json" />
+    <None Remove="Definitions\HousingEmploymentNpcList.json" />
+    <None Remove="Definitions\HousingEmploymentNpcRace.json" />
+    <None Remove="Definitions\HousingExterior.json" />
+    <None Remove="Definitions\HousingFurniture.json" />
+    <None Remove="Definitions\HousingLandSet.json" />
+    <None Remove="Definitions\HousingMapMarkerInfo.json" />
+    <None Remove="Definitions\HousingMerchantPose.json" />
+    <None Remove="Definitions\HousingPlacement.json" />
+    <None Remove="Definitions\HousingPreset.json" />
+    <None Remove="Definitions\HousingUnitedExterior.json" />
+    <None Remove="Definitions\HousingYardObject.json" />
+    <None Remove="Definitions\HowTo.json" />
+    <None Remove="Definitions\HowToCategory.json" />
+    <None Remove="Definitions\HowToPage.json" />
+    <None Remove="Definitions\HugeCraftworksNpc.json" />
+    <None Remove="Definitions\HugeCraftworksRank.json" />
+    <None Remove="Definitions\HWDAnnounce.json" />
+    <None Remove="Definitions\HWDCrafterSupply.json" />
+    <None Remove="Definitions\HWDCrafterSupplyReward.json" />
+    <None Remove="Definitions\HWDCrafterSupplyTerm.json" />
+    <None Remove="Definitions\HWDDevLayerControl.json" />
+    <None Remove="Definitions\HWDDevLevelUI.json" />
+    <None Remove="Definitions\HWDDevLively.json" />
+    <None Remove="Definitions\HWDDevProgress.json" />
+    <None Remove="Definitions\HWDGathereInspectTerm.json" />
+    <None Remove="Definitions\HWDGathererInspection.json" />
+    <None Remove="Definitions\HWDGathererInspectionReward.json" />
+    <None Remove="Definitions\HWDInfoBoardArticle.json" />
+    <None Remove="Definitions\HWDInfoBoardArticleTransient.json" />
+    <None Remove="Definitions\HWDInfoBoardArticleType.json" />
+    <None Remove="Definitions\HWDLevelChangeDeception.json" />
+    <None Remove="Definitions\HWDSharedGroup.json" />
+    <None Remove="Definitions\HWDSharedGroupControlParam.json" />
+    <None Remove="Definitions\IconLanguage.json" />
+    <None Remove="Definitions\IKDContentBonus.json" />
+    <None Remove="Definitions\IKDFishParam.json" />
+    <None Remove="Definitions\IKDRoute.json" />
+    <None Remove="Definitions\IKDRouteTable.json" />
+    <None Remove="Definitions\IKDSpot.json" />
+    <None Remove="Definitions\InclusionShop.json" />
+    <None Remove="Definitions\InclusionShopCategory.json" />
+    <None Remove="Definitions\InclusionShopSeries.json" />
+    <None Remove="Definitions\InclusionShopWelcom.json" />
+    <None Remove="Definitions\InclusionShopWelcomText.json" />
+    <None Remove="Definitions\IndividualWeather.json" />
+    <None Remove="Definitions\InstanceContent.json" />
+    <None Remove="Definitions\InstanceContentBuff.json" />
+    <None Remove="Definitions\InstanceContentCSBonus.json" />
+    <None Remove="Definitions\InstanceContentGuide.json" />
+    <None Remove="Definitions\InstanceContentQICData.json" />
+    <None Remove="Definitions\InstanceContentTextData.json" />
+    <None Remove="Definitions\Item.json" />
+    <None Remove="Definitions\ItemAction.json" />
+    <None Remove="Definitions\ItemActionTelepo.json" />
+    <None Remove="Definitions\ItemBarterCheck.json" />
+    <None Remove="Definitions\ItemFood.json" />
+    <None Remove="Definitions\ItemLevel.json" />
+    <None Remove="Definitions\ItemRepairPrice.json" />
+    <None Remove="Definitions\ItemRepairResource.json" />
+    <None Remove="Definitions\ItemRetainerLevelUp.json" />
+    <None Remove="Definitions\ItemSearchCategory.json" />
+    <None Remove="Definitions\ItemSeries.json" />
+    <None Remove="Definitions\ItemSortCategory.json" />
+    <None Remove="Definitions\ItemSpecialBonus.json" />
+    <None Remove="Definitions\ItemStainCondition.json" />
+    <None Remove="Definitions\ItemUICategory.json" />
+    <None Remove="Definitions\Jingle.json" />
+    <None Remove="Definitions\JobHudManual.json" />
+    <None Remove="Definitions\JobHudManualPriority.json" />
+    <None Remove="Definitions\JournalCategory.json" />
+    <None Remove="Definitions\JournalGenre.json" />
+    <None Remove="Definitions\JournalSection.json" />
+    <None Remove="Definitions\Knockback.json" />
+    <None Remove="Definitions\LegacyQuest.json" />
+    <None Remove="Definitions\Leve.json" />
+    <None Remove="Definitions\LeveAssignmentType.json" />
+    <None Remove="Definitions\LeveClient.json" />
+    <None Remove="Definitions\Level.json" />
+    <None Remove="Definitions\LeveRewardItem.json" />
+    <None Remove="Definitions\LeveRewardItemGroup.json" />
+    <None Remove="Definitions\LeveString.json" />
+    <None Remove="Definitions\LeveVfx.json" />
+    <None Remove="Definitions\Lobby.json" />
+    <None Remove="Definitions\LogFilter.json" />
+    <None Remove="Definitions\LogKind.json" />
+    <None Remove="Definitions\LogMessage.json" />
+    <None Remove="Definitions\LotteryExchangeShop.json" />
+    <None Remove="Definitions\MacroIcon.json" />
+    <None Remove="Definitions\MacroIconRedirectOld.json" />
+    <None Remove="Definitions\MainCommand.json" />
+    <None Remove="Definitions\MainCommandCategory.json" />
+    <None Remove="Definitions\ManeuversArmor.json" />
+    <None Remove="Definitions\Map.json" />
+    <None Remove="Definitions\MapCondition.json" />
+    <None Remove="Definitions\MapExclusive.json" />
+    <None Remove="Definitions\MapMarker.json" />
+    <None Remove="Definitions\MapMarkerRegion.json" />
+    <None Remove="Definitions\MapSymbol.json" />
+    <None Remove="Definitions\MapTransientPvPMap.json" />
+    <None Remove="Definitions\MapType.json" />
+    <None Remove="Definitions\Marker.json" />
+    <None Remove="Definitions\Materia.json" />
+    <None Remove="Definitions\MateriaGrade.json" />
+    <None Remove="Definitions\MateriaJoinRate.json" />
+    <None Remove="Definitions\MateriaJoinRateGatherCraft.json" />
+    <None Remove="Definitions\MateriaTomestoneRate.json" />
+    <None Remove="Definitions\MiniGameRA.json" />
+    <None Remove="Definitions\MinionRace.json" />
+    <None Remove="Definitions\MinionRules.json" />
+    <None Remove="Definitions\MinionSkillType.json" />
+    <None Remove="Definitions\MJICraftworksObject.json" />
+    <None Remove="Definitions\MJICraftworksPopularityType.json" />
+    <None Remove="Definitions\MJICraftworksSupplyDefine.json" />
+    <None Remove="Definitions\MJICraftworksSupplyType.json" />
+    <None Remove="Definitions\MJICraftworksTension.json" />
+    <None Remove="Definitions\MJIFunction.json" />
+    <None Remove="Definitions\MJIGathering.json" />
+    <None Remove="Definitions\MJIGatheringObject.json" />
+    <None Remove="Definitions\MJIItemPouch.json" />
+    <None Remove="Definitions\MJIRank.json" />
+    <None Remove="Definitions\MJIRecipe.json" />
+    <None Remove="Definitions\MJIRecipeMaterial.json" />
+    <None Remove="Definitions\MJIVillageAppearanceSG.json" />
+    <None Remove="Definitions\MJIVillageDevelopment.json" />
+    <None Remove="Definitions\MobHuntOrder.json" />
+    <None Remove="Definitions\MobHuntOrderType.json" />
+    <None Remove="Definitions\MobHuntReward.json" />
+    <None Remove="Definitions\MobHuntRewardCap.json" />
+    <None Remove="Definitions\MobHuntTarget.json" />
+    <None Remove="Definitions\ModelChara.json" />
+    <None Remove="Definitions\ModelSkeleton.json" />
+    <None Remove="Definitions\ModelState.json" />
+    <None Remove="Definitions\MonsterNote.json" />
+    <None Remove="Definitions\MonsterNoteTarget.json" />
+    <None Remove="Definitions\MotionTimeline.json" />
+    <None Remove="Definitions\MotionTimelineBlendTable.json" />
+    <None Remove="Definitions\Mount.json" />
+    <None Remove="Definitions\MountAction.json" />
+    <None Remove="Definitions\MountCustomize.json" />
+    <None Remove="Definitions\MountFlyingCondition.json" />
+    <None Remove="Definitions\MountSpeed.json" />
+    <None Remove="Definitions\MountTransient.json" />
+    <None Remove="Definitions\MoveTimeline.json" />
+    <None Remove="Definitions\MoveVfx.json" />
+    <None Remove="Definitions\MovieStaffList.json" />
+    <None Remove="Definitions\MovieSubtitle.json" />
+    <None Remove="Definitions\MovieSubtitle500.json" />
+    <None Remove="Definitions\MovieSubtitleVoyage.json" />
+    <None Remove="Definitions\MYCTemporaryItem.json" />
+    <None Remove="Definitions\MYCTemporaryItemUICategory.json" />
+    <None Remove="Definitions\MYCWarResultNotebook.json" />
+    <None Remove="Definitions\NotebookDivision.json" />
+    <None Remove="Definitions\NotebookDivisionCategory.json" />
+    <None Remove="Definitions\NotoriousMonster.json" />
+    <None Remove="Definitions\NpcEquip.json" />
+    <None Remove="Definitions\NpcYell.json" />
+    <None Remove="Definitions\Omen.json" />
+    <None Remove="Definitions\Omikuji.json" />
+    <None Remove="Definitions\OmikujiGuidance.json" />
+    <None Remove="Definitions\OnlineStatus.json" />
+    <None Remove="Definitions\OpenContent.json" />
+    <None Remove="Definitions\OpenContentCandidateName.json" />
+    <None Remove="Definitions\Opening.json" />
+    <None Remove="Definitions\Orchestrion.json" />
+    <None Remove="Definitions\OrchestrionCategory.json" />
+    <None Remove="Definitions\OrchestrionPath.json" />
+    <None Remove="Definitions\OrchestrionUiparam.json" />
+    <None Remove="Definitions\Ornament.json" />
+    <None Remove="Definitions\OrnamentAction.json" />
+    <None Remove="Definitions\ParamGrow.json" />
+    <None Remove="Definitions\PartyContent.json" />
+    <None Remove="Definitions\PartyContentCutscene.json" />
+    <None Remove="Definitions\PartyContentTextData.json" />
+    <None Remove="Definitions\PatchMark.json" />
+    <None Remove="Definitions\Perform.json" />
+    <None Remove="Definitions\PerformGroup.json" />
+    <None Remove="Definitions\PerformTransient.json" />
+    <None Remove="Definitions\Pet.json" />
+    <None Remove="Definitions\PetAction.json" />
+    <None Remove="Definitions\PetMirage.json" />
+    <None Remove="Definitions\PhysicsGroup.json" />
+    <None Remove="Definitions\PhysicsWind.json" />
+    <None Remove="Definitions\Picture.json" />
+    <None Remove="Definitions\PlaceName.json" />
+    <None Remove="Definitions\PlantPotFlowerSeed.json" />
+    <None Remove="Definitions\PlayerSearchLocation.json" />
+    <None Remove="Definitions\PlayerSearchSubLocation.json" />
+    <None Remove="Definitions\PreHandler.json" />
+    <None Remove="Definitions\PresetCamera.json" />
+    <None Remove="Definitions\PresetCameraAdjust.json" />
+    <None Remove="Definitions\PublicContent.json" />
+    <None Remove="Definitions\PublicContentCutscene.json" />
+    <None Remove="Definitions\PublicContentTextData.json" />
+    <None Remove="Definitions\PvPAction.json" />
+    <None Remove="Definitions\PvPActionSort.json" />
+    <None Remove="Definitions\PvPRank.json" />
+    <None Remove="Definitions\PvPSelectTrait.json" />
+    <None Remove="Definitions\PvPSeries.json" />
+    <None Remove="Definitions\PvPSeriesLevel.json" />
+    <None Remove="Definitions\PvPTrait.json" />
+    <None Remove="Definitions\Quest.json" />
+    <None Remove="Definitions\QuestAcceptAdditionCondition.json" />
+    <None Remove="Definitions\QuestBattle.json" />
+    <None Remove="Definitions\QuestChapter.json" />
+    <None Remove="Definitions\QuestClassJobReward.json" />
+    <None Remove="Definitions\QuestClassJobSupply.json" />
+    <None Remove="Definitions\QuestDerivedClass.json" />
+    <None Remove="Definitions\QuestEffect.json" />
+    <None Remove="Definitions\QuestEffectDefine.json" />
+    <None Remove="Definitions\QuestRedo.json" />
+    <None Remove="Definitions\QuestRedoChapterUI.json" />
+    <None Remove="Definitions\QuestRedoChapterUICategory.json" />
+    <None Remove="Definitions\QuestRedoChapterUITab.json" />
+    <None Remove="Definitions\QuestRedoIncompChapter.json" />
+    <None Remove="Definitions\QuestRepeatFlag.json" />
+    <None Remove="Definitions\QuestRewardOther.json" />
+    <None Remove="Definitions\QuickChat.json" />
+    <None Remove="Definitions\QuickChatTransient.json" />
+    <None Remove="Definitions\Race.json" />
+    <None Remove="Definitions\RacingChocoboItem.json" />
+    <None Remove="Definitions\RacingChocoboName.json" />
+    <None Remove="Definitions\RacingChocoboNameCategory.json" />
+    <None Remove="Definitions\RacingChocoboNameInfo.json" />
+    <None Remove="Definitions\RacingChocoboParam.json" />
+    <None Remove="Definitions\RaidFinderParam.json" />
+    <None Remove="Definitions\ReactionEventObject.json" />
+    <None Remove="Definitions\ReactionEventObjectInfo.json" />
+    <None Remove="Definitions\RecastNavimesh.json" />
+    <None Remove="Definitions\Recipe.json" />
+    <None Remove="Definitions\RecipeLevelTable.json" />
+    <None Remove="Definitions\RecipeLookup.json" />
+    <None Remove="Definitions\RecipeNotebookList.json" />
+    <None Remove="Definitions\RecommendContents.json" />
+    <None Remove="Definitions\Relic.json" />
+    <None Remove="Definitions\Relic3.json" />
+    <None Remove="Definitions\RelicItem.json" />
+    <None Remove="Definitions\RelicNote.json" />
+    <None Remove="Definitions\RelicNoteCategory.json" />
+    <None Remove="Definitions\Resident.json" />
+    <None Remove="Definitions\ResistanceWeaponAdjust.json" />
+    <None Remove="Definitions\RetainerFortuneRewardRange.json" />
+    <None Remove="Definitions\RetainerTask.json" />
+    <None Remove="Definitions\RetainerTaskLvRange.json" />
+    <None Remove="Definitions\RetainerTaskNormal.json" />
+    <None Remove="Definitions\RetainerTaskParameter.json" />
+    <None Remove="Definitions\RetainerTaskRandom.json" />
+    <None Remove="Definitions\RideShooting.json" />
+    <None Remove="Definitions\RideShootingTargetType.json" />
+    <None Remove="Definitions\RideShootingTextData.json" />
+    <None Remove="Definitions\RPParameter.json" />
+    <None Remove="Definitions\SatisfactionArbitration.json" />
+    <None Remove="Definitions\SatisfactionNpc.json" />
+    <None Remove="Definitions\SatisfactionSupply.json" />
+    <None Remove="Definitions\SatisfactionSupplyReward.json" />
+    <None Remove="Definitions\ScenarioTree.json" />
+    <None Remove="Definitions\ScenarioTreeTips.json" />
+    <None Remove="Definitions\ScenarioTreeTipsClassQuest.json" />
+    <None Remove="Definitions\ScenarioType.json" />
+    <None Remove="Definitions\ScreenImage.json" />
+    <None Remove="Definitions\SecretRecipeBook.json" />
+    <None Remove="Definitions\SharlayanCraftWorks.json" />
+    <None Remove="Definitions\SharlayanCraftWorksSupply.json" />
+    <None Remove="Definitions\SkyIsland2Mission.json" />
+    <None Remove="Definitions\SkyIsland2MissionDetail.json" />
+    <None Remove="Definitions\SkyIsland2MissionType.json" />
+    <None Remove="Definitions\SkyIsland2RangeType.json" />
+    <None Remove="Definitions\Snipe.json" />
+    <None Remove="Definitions\SnipeTalk.json" />
+    <None Remove="Definitions\SnipeTalkName.json" />
+    <None Remove="Definitions\SpearfishingComboTarget.json" />
+    <None Remove="Definitions\SpearfishingItem.json" />
+    <None Remove="Definitions\SpearfishingNotebook.json" />
+    <None Remove="Definitions\SpearfishingRecordPage.json" />
+    <None Remove="Definitions\SpearfishingSilhouette.json" />
+    <None Remove="Definitions\SpecialShop.json" />
+    <None Remove="Definitions\SpecialShopItemCategory.json" />
+    <None Remove="Definitions\Stain.json" />
+    <None Remove="Definitions\StainTransient.json" />
+    <None Remove="Definitions\StanceChange.json" />
+    <None Remove="Definitions\Status.json" />
+    <None Remove="Definitions\StatusHitEffect.json" />
+    <None Remove="Definitions\StatusLoopVFX.json" />
+    <None Remove="Definitions\Story.json" />
+    <None Remove="Definitions\SubmarineExploration.json" />
+    <None Remove="Definitions\SubmarineMap.json" />
+    <None Remove="Definitions\SubmarinePart.json" />
+    <None Remove="Definitions\SubmarineRank.json" />
+    <None Remove="Definitions\SwitchTalk.json" />
+    <None Remove="Definitions\SwitchTalkVariation.json" />
+    <None Remove="Definitions\TelepoRelay.json" />
+    <None Remove="Definitions\TerritoryType.json" />
+    <None Remove="Definitions\TerritoryTypeTelepo.json" />
+    <None Remove="Definitions\TerritoryTypeTransient.json" />
+    <None Remove="Definitions\TextCommand.json" />
+    <None Remove="Definitions\TextCommandParam.json" />
+    <None Remove="Definitions\Title.json" />
+    <None Remove="Definitions\Tomestones.json" />
+    <None Remove="Definitions\TomestonesItem.json" />
+    <None Remove="Definitions\TopicSelect.json" />
+    <None Remove="Definitions\Town.json" />
+    <None Remove="Definitions\Trait.json" />
+    <None Remove="Definitions\TraitRecast.json" />
+    <None Remove="Definitions\TraitTransient.json" />
+    <None Remove="Definitions\Transformation.json" />
+    <None Remove="Definitions\Treasure.json" />
+    <None Remove="Definitions\TreasureHuntRank.json" />
+    <None Remove="Definitions\TreasureModel.json" />
+    <None Remove="Definitions\TreasureSpot.json" />
+    <None Remove="Definitions\Tribe.json" />
+    <None Remove="Definitions\TripleTriad.json" />
+    <None Remove="Definitions\TripleTriadCard.json" />
+    <None Remove="Definitions\TripleTriadCardObtain.json" />
+    <None Remove="Definitions\TripleTriadCardRarity.json" />
+    <None Remove="Definitions\TripleTriadCardResident.json" />
+    <None Remove="Definitions\TripleTriadCardType.json" />
+    <None Remove="Definitions\TripleTriadCompetition.json" />
+    <None Remove="Definitions\TripleTriadResident.json" />
+    <None Remove="Definitions\TripleTriadRule.json" />
+    <None Remove="Definitions\Tutorial.json" />
+    <None Remove="Definitions\TutorialDPS.json" />
+    <None Remove="Definitions\TutorialHealer.json" />
+    <None Remove="Definitions\TutorialTank.json" />
+    <None Remove="Definitions\UDS_Event.json" />
+    <None Remove="Definitions\UDS_Property.json" />
+    <None Remove="Definitions\UIColor.json" />
+    <None Remove="Definitions\UIConst.json" />
+    <None Remove="Definitions\VaseFlower.json" />
+    <None Remove="Definitions\VFX.json" />
+    <None Remove="Definitions\Warp.json" />
+    <None Remove="Definitions\WarpCondition.json" />
+    <None Remove="Definitions\WarpLogic.json" />
+    <None Remove="Definitions\WeaponTimeline.json" />
+    <None Remove="Definitions\Weather.json" />
+    <None Remove="Definitions\WeatherGroup.json" />
+    <None Remove="Definitions\WeatherRate.json" />
+    <None Remove="Definitions\WeatherReportReplace.json" />
+    <None Remove="Definitions\WebGuidance.json" />
+    <None Remove="Definitions\WebURL.json" />
+    <None Remove="Definitions\WeddingBGM.json" />
+    <None Remove="Definitions\WeeklyBingoOrderData.json" />
+    <None Remove="Definitions\WeeklyBingoRewardData.json" />
+    <None Remove="Definitions\WeeklyBingoText.json" />
+    <None Remove="Definitions\WeeklyLotBonus.json" />
+    <None Remove="Definitions\World.json" />
+    <None Remove="Definitions\WorldDCGroupType.json" />
+    <None Remove="Definitions\YardCatalogCategory.json" />
+    <None Remove="Definitions\YardCatalogItemList.json" />
+    <None Remove="Definitions\YKW.json" />
+    <None Remove="Definitions\ZoneSharedGroup.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Definitions\Achievement.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AchievementCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AchievementHideCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AchievementKind.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AchievementTarget.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Action.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionCastTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionCastVFX.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionComboRoute.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionIndirection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionProcStatus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionTimelineMove.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionTimelineReplace.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActionTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActivityFeedButtons.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActivityFeedCaptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActivityFeedGroupCaptions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ActivityFeedImages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Addon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Adventure.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AdventureExPhase.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AetherCurrent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AetherCurrentCompFlgSet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AetherialWheel.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Aetheryte.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AetheryteSystemDefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AetheryteTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AirshipExplorationLevel.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AirshipExplorationLog.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AirshipExplorationParamType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AirshipExplorationPart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AirshipExplorationPoint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AkatsukiNote.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AkatsukiNoteString.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimationLOD.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5Param.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5PatternGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5SpiritTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5SpiritTalkParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeapon5TradeItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeaponFUITalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeaponFUITalkParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeaponIcon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AnimaWeaponItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AozAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AozActionTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZArrangement.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZBoss.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZContentBriefingBNpc.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZReport.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AOZScore.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AquariumFish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AquariumWater.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ArchiveItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ArrayEventHandler.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\AttackType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BacklightColor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Ballista.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Balloon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerBg.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerDecoration.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerDesignPreset.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerFacial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerFrame.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerPreset.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BannerTimelineFrame.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BaseParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BattleLeve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BattleLeveRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BeastRankBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BeastReputationRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BeastTribe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Behavior.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BehaviorPath.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BenchmarkOverrideEquipment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGM.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMFade.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMFadeType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMScene.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMSituation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMSwitch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BGMSystemDefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcAnnounceIcon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcBase.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcBasePopVfx.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcCustomize.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcParts.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BNpcState.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Booster.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Buddy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BuddyAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BuddyEquip.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BuddyItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BuddyRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\BuddySkill.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Cabinet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CabinetCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Calendar.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Carry.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Channeling.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardBase.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardDecoration.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardDesignPreset.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardDesignType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardHeader.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaCardPlayStyle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaMakeClassEquip.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaMakeCustomize.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaMakeName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CharaMakeType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRace.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceAbility.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceAbilityType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceStatus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceTerritory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceTutorial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboRaceWeather.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboTaxi.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ChocoboTaxiStand.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CircleActivity.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ClassJob.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ClassJobCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShopItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShopItemGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShopRefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShopRewardItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CollectablesShopRewardScrip.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Companion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanionMove.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanionTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftDraft.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftDraftCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftManufactoryState.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftPart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftProcess.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftSequence.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftSupplyItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyCraftType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyLeve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompanyLeveRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompleteJournal.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CompleteJournalCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Completion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Condition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ConfigKey.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentCloseCycle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentExAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentFinderCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentFinderConditionTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentGauge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentGaugeColor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentMemberType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentNpcTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentRandomSelect.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentRoulette.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentRouletteOpenRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentRouletteRoleBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentsNote.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentsTutorial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentsTutorialPage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentTalkParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ContentType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CraftAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CraftLeve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CraftLevelDifference.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CraftLeveTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CraftType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Credit.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CreditBackImage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CreditCast.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CreditList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CreditListText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CustomTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CustomTalkNestHandlers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Cutscene.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CutSceneIncompQuest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CutsceneMotion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CutsceneWorkIndex.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CutScreenImage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\CycleTime.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DailySupplyItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DawnContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DawnGrowMember.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DawnMemberUIParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DawnQuestMember.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonBan.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonDanger.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonEquipment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonFloorEffectUI.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonLayer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonMagicStone.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonMap5X.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonRoom.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeepDungeonStatus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DefaultTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DefaultTalkLipSyncType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DeliveryQuest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Description.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DescriptionPage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DescriptionSection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DescriptionString.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DisposalShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DisposalShopFilterType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DisposalShopItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DpsChallenge.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DpsChallengeOfficer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DpsChallengeTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DynamicEvent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DynamicEventEnemyType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DynamicEventSingleBattle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\DynamicEventType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EmjAddon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EmjDani.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Emote.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EmoteCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EmoteMode.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ENpcBase.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ENpcDressUp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ENpcDressUpDress.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ENpcResident.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EObj.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EObjName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EquipRaceCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EquipSlotCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaAetherItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaAethernet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaGrowData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaLogosMixerProbability.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaMagiaAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaMagiciteItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaMagiciteItemType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EurekaSphereElementAdjust.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventCustomIconType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventIconPriority.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventIconType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventItemCastTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventItemHelp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventItemTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventPathMove.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\EventSystemDefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ExportedGatheringPoint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ExportedSG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ExVersion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Fate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FateEvent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FateMode.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FateProgressUI.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FateShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FateTokenType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCActivity.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCActivityCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCAuthority.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCAuthorityCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCChestName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCCrestSymbol.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FccShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCHierarchy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCProfile.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCReputation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FCRights.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Festival.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FieldMarker.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FishingRecordType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FishingRecordTypeTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FishingSpot.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FishParameter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FittingShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FittingShopCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FittingShopCategoryItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FittingShopItemSet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Frontline03.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Frontline04.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FurnitureCatalogCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\FurnitureCatalogItemList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\game.ver">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GameRewardObtainType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GardeningSeed.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringExp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringItemLevelConvertTable.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringItemPoint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringLeve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringLeveRoute.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringLeveRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringNotebookList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPoint.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPointBase.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPointBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPointBonusType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPointName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringPointTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringRarePopTimeTable.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringSubCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GatheringType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyCaptureTactics.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyEquipPreset.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyExpedition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyExpeditionMemberBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyExpeditionType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyMemberGrow.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GcArmyTraining.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankGridaniaFemaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankGridaniaMaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankLimsaFemaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankLimsaMaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankUldahFemaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCRankUldahMaleText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCScripShopCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCScripShopItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCShopItemCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCSupplyDuty.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GCSupplyDutyReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GeneralAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GFATE.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GFateClimbing2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GFateClimbing2Content.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GFateClimbing2TotemType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GFateRideShooting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GilShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GilShopItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GimmickAccessor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GimmickJump.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GimmickRect.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GoldSaucerArcadeMachine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GoldSaucerTextData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GrandCompany.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GrandCompanyRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GroupPoseFrame.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GroupPoseStamp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GroupPoseStampCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuardianDeity.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Guide.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuidePage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuidePageString.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuideTitle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildleveAssignment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildleveAssignmentCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildleveAssignmentTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildOrder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildOrderGuide.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\GuildOrderOfficer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HairMakeType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HouseRetainerPose.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingAethernet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingAppeal.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingEmploymentNpcList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingEmploymentNpcRace.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingExterior.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingFurniture.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingLandSet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingMapMarkerInfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingMerchantPose.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingPlacement.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingPreset.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingUnitedExterior.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HousingYardObject.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HowTo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HowToCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HowToPage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HugeCraftworksNpc.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HugeCraftworksRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDAnnounce.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDCrafterSupply.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDCrafterSupplyReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDCrafterSupplyTerm.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDDevLayerControl.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDDevLevelUI.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDDevLively.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDDevProgress.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDGathereInspectTerm.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDGathererInspection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDGathererInspectionReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDInfoBoardArticle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDInfoBoardArticleTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDInfoBoardArticleType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDLevelChangeDeception.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDSharedGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\HWDSharedGroupControlParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IconLanguage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IKDContentBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IKDFishParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IKDRoute.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IKDRouteTable.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IKDSpot.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InclusionShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InclusionShopCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InclusionShopSeries.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InclusionShopWelcom.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InclusionShopWelcomText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\IndividualWeather.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContentBuff.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContentCSBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContentGuide.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContentQICData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\InstanceContentTextData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Item.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemActionTelepo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemBarterCheck.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemFood.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemLevel.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemRepairPrice.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemRepairResource.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemRetainerLevelUp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemSearchCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemSeries.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemSortCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemSpecialBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemStainCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ItemUICategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Jingle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\JobHudManual.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\JobHudManualPriority.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\JournalCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\JournalGenre.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\JournalSection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Knockback.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LegacyQuest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Leve.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveAssignmentType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveClient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Level.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveRewardItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveRewardItemGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveString.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LeveVfx.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Lobby.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LogFilter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LogKind.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LogMessage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\LotteryExchangeShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MacroIcon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MacroIconRedirectOld.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MainCommand.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MainCommandCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ManeuversArmor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Map.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapExclusive.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapMarker.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapMarkerRegion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapSymbol.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapTransientPvPMap.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MapType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Marker.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Materia.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MateriaGrade.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MateriaJoinRate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MateriaJoinRateGatherCraft.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MateriaTomestoneRate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MiniGameRA.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MinionRace.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MinionRules.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MinionSkillType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJICraftworksObject.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJICraftworksPopularityType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJICraftworksSupplyDefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJICraftworksSupplyType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJICraftworksTension.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIFunction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIGathering.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIGatheringObject.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIItemPouch.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIRecipe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIRecipeMaterial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIVillageAppearanceSG.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MJIVillageDevelopment.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MobHuntOrder.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MobHuntOrderType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MobHuntReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MobHuntRewardCap.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MobHuntTarget.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ModelChara.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ModelSkeleton.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ModelState.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MonsterNote.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MonsterNoteTarget.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MotionTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MotionTimelineBlendTable.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Mount.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MountAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MountCustomize.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MountFlyingCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MountSpeed.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MountTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MoveTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MoveVfx.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MovieStaffList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MovieSubtitle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MovieSubtitle500.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MovieSubtitleVoyage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MYCTemporaryItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MYCTemporaryItemUICategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\MYCWarResultNotebook.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\NotebookDivision.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\NotebookDivisionCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\NotoriousMonster.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\NpcEquip.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\NpcYell.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Omen.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Omikuji.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OmikujiGuidance.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OnlineStatus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OpenContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OpenContentCandidateName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Opening.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Orchestrion.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OrchestrionCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OrchestrionPath.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OrchestrionUiparam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Ornament.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\OrnamentAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ParamGrow.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PartyContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PartyContentCutscene.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PartyContentTextData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PatchMark.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Perform.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PerformGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PerformTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Pet.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PetAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PetMirage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PhysicsGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PhysicsWind.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Picture.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PlaceName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PlantPotFlowerSeed.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PlayerSearchLocation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PlayerSearchSubLocation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PreHandler.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PresetCamera.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PresetCameraAdjust.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PublicContent.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PublicContentCutscene.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PublicContentTextData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPAction.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPActionSort.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPSelectTrait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPSeries.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPSeriesLevel.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\PvPTrait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Quest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestAcceptAdditionCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestBattle.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestChapter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestClassJobReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestClassJobSupply.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestDerivedClass.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestEffect.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestEffectDefine.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRedo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRedoChapterUI.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRedoChapterUICategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRedoChapterUITab.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRedoIncompChapter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRepeatFlag.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuestRewardOther.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuickChat.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\QuickChatTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Race.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RacingChocoboItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RacingChocoboName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RacingChocoboNameCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RacingChocoboNameInfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RacingChocoboParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RaidFinderParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ReactionEventObject.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ReactionEventObjectInfo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RecastNavimesh.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Recipe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RecipeLevelTable.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RecipeLookup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RecipeNotebookList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RecommendContents.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Relic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Relic3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RelicItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RelicNote.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RelicNoteCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Resident.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ResistanceWeaponAdjust.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerFortuneRewardRange.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerTask.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerTaskLvRange.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerTaskNormal.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerTaskParameter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RetainerTaskRandom.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RideShooting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RideShootingTargetType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RideShootingTextData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\RPParameter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SatisfactionArbitration.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SatisfactionNpc.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SatisfactionSupply.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SatisfactionSupplyReward.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ScenarioTree.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ScenarioTreeTips.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ScenarioTreeTipsClassQuest.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ScenarioType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ScreenImage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SecretRecipeBook.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SharlayanCraftWorks.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SharlayanCraftWorksSupply.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SkyIsland2Mission.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SkyIsland2MissionDetail.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SkyIsland2MissionType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SkyIsland2RangeType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Snipe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SnipeTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SnipeTalkName.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpearfishingComboTarget.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpearfishingItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpearfishingNotebook.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpearfishingRecordPage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpearfishingSilhouette.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpecialShop.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SpecialShopItemCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Stain.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\StainTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\StanceChange.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Status.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\StatusHitEffect.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\StatusLoopVFX.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Story.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SubmarineExploration.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SubmarineMap.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SubmarinePart.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SubmarineRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SwitchTalk.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\SwitchTalkVariation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TelepoRelay.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TerritoryType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TerritoryTypeTelepo.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TerritoryTypeTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TextCommand.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TextCommandParam.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Title.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Tomestones.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TomestonesItem.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TopicSelect.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Town.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Trait.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TraitRecast.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TraitTransient.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Transformation.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Treasure.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TreasureHuntRank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TreasureModel.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TreasureSpot.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Tribe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriad.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCard.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCardObtain.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCardRarity.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCardResident.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCardType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadCompetition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadResident.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TripleTriadRule.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Tutorial.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TutorialDPS.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TutorialHealer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\TutorialTank.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\UDS_Event.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\UDS_Property.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\UIColor.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\UIConst.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\VaseFlower.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\VFX.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Warp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WarpCondition.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WarpLogic.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeaponTimeline.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\Weather.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeatherGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeatherRate.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeatherReportReplace.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WebGuidance.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WebURL.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeddingBGM.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeeklyBingoOrderData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeeklyBingoRewardData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeeklyBingoText.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WeeklyLotBonus.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\World.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\WorldDCGroupType.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\YardCatalogCategory.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\YardCatalogItemList.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\YKW.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Definitions\ZoneSharedGroup.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FFXIVDataManager\FFXIVDataManager\FFXIVDataManager.csproj" />
+    <ProjectReference Include="..\SaintCoinach\SaintCoinach\SaintCoinach.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Definitions\DawnQuestAnnounce.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Solving\DynamicProgramming\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnmanagedArray" Version="2.1.3" />
+  </ItemGroup>
+
+</Project>

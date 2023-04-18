@@ -1,0 +1,103 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "FFXIVCraftingLib/1.0.0": {
+        "dependencies": {
+          "FFXIVDataManager": "1.0.0",
+          "SaintCoinach": "1.0.0"
+        },
+        "runtime": {
+          "FFXIVCraftingLib.dll": {}
+        }
+      },
+      "DotSquish/1.0.0": {
+        "runtime": {
+          "DotSquish.dll": {}
+        }
+      },
+      "FFXIVDataManager/1.0.0": {
+        "dependencies": {
+          "DotSquish": "1.0.0",
+          "SaintCoinach": "1.0.0"
+        },
+        "runtime": {
+          "FFXIVDataManager.dll": {}
+        }
+      },
+      "SaintCoinach/1.0.0": {
+        "dependencies": {
+          "DotSquish": "1.0.0"
+        },
+        "runtime": {
+          "SaintCoinach.dll": {}
+        }
+      },
+      "DotNetZip/1.16.0.0": {
+        "runtime": {
+          "DotNetZip.dll": {
+            "assemblyVersion": "1.16.0.0",
+            "fileVersion": "1.16.0.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "EntityFramework/6.0.0.0": {
+        "runtime": {
+          "EntityFramework.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.400.420.21404"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FFXIVCraftingLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DotSquish/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FFXIVDataManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SaintCoinach/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DotNetZip/1.16.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntityFramework/6.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
